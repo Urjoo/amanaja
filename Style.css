@@ -1,0 +1,13 @@
+﻿.parallax-container {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 1px;
+}
+
+.parallax-content {
+    position: relative;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: translateZ(-1px) scale(2);
+}

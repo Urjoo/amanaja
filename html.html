@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Website dengan Efek Paralaks</title>
+    <style>
+        .body {
+            background-color: lightblue;
+        }
+        .parallax-container {
+            height: 100vh;
+            overflow-x: hidden;
+            overflow-y: auto;
+            perspective: 1px;
+        }
+
+        .parallax-content {
+            position: relative;
+            height: 100%;
+            transform-style: preserve-3d;
+            transform: translateZ(-1px) scale(2);
+        }
+
+    </style>
+</head>
+<body bgcolor ="#56781" >
+    <center>
+        <div class="parallax-container">
+            <div class="parallax-content">
+                <h1>HAPPY WEDDING TO MY BESTFRIEND!!!!!</h1>
+                <p>START ON 29/11/2023</p>
+                <img src="arif.jpeg" />
+            </div>
+        </div>
+
+        <script>
+window.addEventListener('scroll', function () {
+                var scrolled = window.scrollY;
+                var parallaxContent = document.querySelector('.parallax-content');
+                parallaxContent.style.transform = 'translateY(' + (scrolled * -0.3) + 'px)';
+});
+
+        </script>
+    </center>
+</body>
+</html>
